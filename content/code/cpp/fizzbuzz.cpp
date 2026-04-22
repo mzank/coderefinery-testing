@@ -36,8 +36,8 @@ TEST_CASE("FizzBuzz", "[fizzbuzz]") {
 	"8",        "Fizz", "Buzz", "11",   "Fizz", "13",   "14",
 	"FizzBuzz", "16",   "17",   "Fizz", "19",   "Buzz"};
 
-  for (auto i = 1; i <= 21; ++i) {
-    REQUIRE(fizzbuzz(i) == expected[i]);
+  for (auto i = 1; i <= expected.size(); ++i) {
+    REQUIRE(fizzbuzz(i) == expected[i-1]);
   }
 }
 
